@@ -101,12 +101,12 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(actual, expectedPackageJSON);
+                    assert.deepStrictEqual(actual, expectedPackageJSON);
 
                     body = fs.readFileSync('themes/Green-color-theme.json', 'utf8');
 
                     actual = JSON.parse(body);
-                    assert.deepEqual(actual, expectedColorTheme);
+                    assert.deepStrictEqual(actual, expectedColorTheme);
 
                     done();
                 } catch (e) {
@@ -169,12 +169,12 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(actual, expectedPackageJSON);
+                    assert.deepStrictEqual(actual, expectedPackageJSON);
 
                     body = fs.readFileSync('themes/Green-color-theme.json', 'utf8');
 
                     actual = JSON.parse(body);
-                    assert.deepEqual(actual, expectedColorTheme);
+                    assert.deepStrictEqual(actual, expectedColorTheme);
 
                     done();
                 } catch (e) {
@@ -255,12 +255,12 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(actual, expectedPackageJSON);
+                    assert.deepStrictEqual(actual, expectedPackageJSON);
 
                     body = fs.readFileSync('themes/Theme 74-color-theme.json', 'utf8');
 
                     actual = JSON.parse(body);
-                    assert.deepEqual(actual, expectedColorTheme);
+                    assert.deepStrictEqual(actual, expectedColorTheme);
 
                     done();
                 } catch (e) {
@@ -312,7 +312,7 @@ describe('test code generator', function () {
 
                     var actual = JSON.parse(body);
 
-                    assert.deepEqual(actual, expectedPackageJSON);
+                    assert.deepStrictEqual(actual, expectedPackageJSON);
 
                     body = fs.readFileSync('themes/Funky-color-theme.json', 'utf8');
 
@@ -377,7 +377,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
                     done();
                 } catch (e) {
                     done(e);
@@ -435,7 +435,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
                     done();
                 } catch (e) {
                     done(e);
@@ -493,7 +493,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     var grammar = fs.readFileSync('syntaxes/crusty.tmLanguage.json', 'utf8');
 
@@ -548,7 +548,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     done();
                 } catch (e) {
@@ -624,12 +624,12 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     var snippet = fs.readFileSync('snippets/snippets.code-snippets', 'utf8');
 
                     var actualSnippet = JSON.parse(snippet);
-                    assert.deepEqual(expectedSnippet, actualSnippet);
+                    assert.deepStrictEqual(expectedSnippet, actualSnippet);
 
                     done();
                 } catch (e) {
@@ -676,7 +676,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     done();
                 } catch (e) {
@@ -717,16 +717,16 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": engineVersion,
                         "@types/azdata": env.azdataVersion,// {{ADS EDIT}}
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
+                        "@types/mocha": "^9.0.0",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
                         "@typescript-eslint/parser": "^2.30.0",
                         "@typescript-eslint/eslint-plugin": "^2.30.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0"
+                        "glob": "^7.1.7",
+                        "mocha": "^9.1.0",
+                        "typescript": "^4.3.5",
+                        "azdata-test": "^1.x"
                     },
                     "main": "./out/extension.js",
                     "scripts": {
@@ -760,7 +760,7 @@ describe('test code generator', function () {
 
                     var packageJSONBody = fs.readFileSync('package.json', 'utf8')
                     var actualPackageJSON = JSON.parse(packageJSONBody);
-                    assert.deepEqual(expectedPackageJSON, actualPackageJSON);
+                    assert.deepStrictEqual(expectedPackageJSON, actualPackageJSON);
 
                     done();
                 } catch (e) {
@@ -800,16 +800,16 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": engineVersion,
                         "@types/azdata": env.azdataVersion,// {{ADS EDIT}}
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
+                        "@types/mocha": "^9.0.0",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
                         "@typescript-eslint/parser": "^2.30.0",
                         "@typescript-eslint/eslint-plugin": "^2.30.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0"
+                        "glob": "^7.1.7",
+                        "mocha": "^9.1.0",
+                        "typescript": "^4.3.5",
+                        "azdata-test": "^1.x"
                     },
                     "main": "./out/extension.js",
                     "scripts": {
@@ -850,7 +850,7 @@ describe('test code generator', function () {
                     },
                     "exclude": [
                         "node_modules",
-                        ".vscode-test"
+                        ".ads-test"
                     ]
                 };
                 try {
@@ -858,12 +858,12 @@ describe('test code generator', function () {
 
                     var packageJSONBody = fs.readFileSync('package.json', 'utf8')
                     var actualPackageJSON = JSON.parse(packageJSONBody);
-                    assert.deepEqual(expectedPackageJSON, actualPackageJSON);
+                    assert.deepStrictEqual(expectedPackageJSON, actualPackageJSON);
 
                     var tsconfigBody = fs.readFileSync('tsconfig.json', 'utf8');
 
                     var actualTsConfig = JSON.parse(stripComments(tsconfigBody));
-                    assert.deepEqual(expectedTsConfig, actualTsConfig);
+                    assert.deepStrictEqual(expectedTsConfig, actualTsConfig);
 
                     done();
                 } catch (e) {
@@ -904,14 +904,14 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": engineVersion,
                         "@types/azdata": env.azdataVersion,// {{ADS EDIT}}
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
+                        "@types/mocha": "^9.0.0",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0"
+                        "glob": "^7.1.7",
+                        "mocha": "^9.1.0",
+                        "typescript": "^4.3.5",
+                        "azdata-test": "^1.x"
                     },
                     "main": "./extension.js",
                     "scripts": {
@@ -942,7 +942,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     done();
                 } catch (e) {
@@ -983,7 +983,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('jsconfig.json', 'utf8');
 
                     var actual = JSON.parse(stripComments(body));
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     done();
                 } catch (e) {
@@ -1214,8 +1214,6 @@ describe('test code generator', function () {
                         "build": "gulp build",
                         "compile": "gulp compile",
                         "watch": "gulp watch",
-                        "typings": "gulp copytypings",
-                        "postinstall": "node ./node_modules/vscode/bin/install && node ./node_modules/azdata/bin/install",
                         "proposedapi": "node installTypings.js"
                     },
                     "dependencies": {
@@ -1226,21 +1224,17 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": "^1.39.0",
                         "@types/azdata": "*",
-                        "azdata": "^1.0.0",
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
+                        "@types/mocha": "^9.0.0",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0",
-                        "vscode": "^1.1.6"
+                        "glob": "^7.1.7",
+                        "mocha": "^9.1.0",
+                        "typescript": "^4.3.5",
+                        "azdata-test": "^1.x"
                     }
                 };
                 try {
-
-
                     assert.file(['package.json', 'README.md', 'CHANGELOG.md', '.vscodeignore', 'src/extension.js', 'src/constants.js', 'src/localizedConstants.js', 'src/utils.js', 'src/controllers/controllerBase.js',
                         'src/controllers/mainController.js', 'src/controllers/webviewExample.html', 'src/media/icon', 'src/notebook/sample.ipynb', 'src/sql/all_db_space_used.sql', 'src/sql/cpumetric.sql', 'src/sql/query.sql',
                         'src/test/suite/index.js', 'src/test/suite/extension.test.js', 'jsconfig.json']);
@@ -1248,7 +1242,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     done();
                 } catch (e) {
@@ -1291,7 +1285,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     done();
                 } catch (e) {
@@ -1340,7 +1334,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     done();
                 } catch (e) {
@@ -1389,7 +1383,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
 
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     done();
                 } catch (e) {
@@ -1429,25 +1423,20 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": engineVersion,
                         "@types/azdata": "*",
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
                         "@typescript-eslint/parser": "^2.30.0",
                         "@typescript-eslint/eslint-plugin": "^2.30.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0"
+                        "glob": "^7.1.7",
+                        "typescript": "^4.3.5"
                     },
                     "main": "./out/notebook.js",
                     "scripts": {
                         "vscode:prepublish": "npm run compile",
                         "compile": "tsc -p ./",
                         "lint": "eslint src --ext ts",
-                        "watch": "tsc -watch -p ./",
-                        "pretest": "npm run compile && npm run lint",
-                        "test": "node ./out/test/runTest.js"
+                        "watch": "tsc -watch -p ./"
                     },
                     "categories": [
                         "Other"
@@ -1465,7 +1454,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
                     var actual = JSON.parse(body);
 
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
                     done();
                 } catch (e) {
                     done(e);
@@ -1504,25 +1493,20 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": engineVersion,
                         "@types/azdata": "*",
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
                         "@typescript-eslint/parser": "^2.30.0",
                         "@typescript-eslint/eslint-plugin": "^2.30.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0"
+                        "glob": "^7.1.7",
+                        "typescript": "^4.3.5"
                     },
                     "main": "./out/notebook.js",
                     "scripts": {
                         "vscode:prepublish": "npm run compile",
                         "compile": "tsc -p ./",
                         "lint": "eslint src --ext ts",
-                        "watch": "tsc -watch -p ./",
-                        "pretest": "npm run compile && npm run lint",
-                        "test": "node ./out/test/runTest.js"
+                        "watch": "tsc -watch -p ./"
                     },
                     "categories": [
                         "Other"
@@ -1540,7 +1524,7 @@ describe('test code generator', function () {
                     var body = fs.readFileSync('package.json', 'utf8');
                     var actual = JSON.parse(body);
 
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
                     done();
                 } catch (e) {
                     done(e);
@@ -1578,25 +1562,20 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": engineVersion,
                         "@types/azdata": "*",
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
                         "@typescript-eslint/parser": "^2.30.0",
                         "@typescript-eslint/eslint-plugin": "^2.30.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0"
+                        "glob": "^7.1.7",
+                        "typescript": "^4.3.5"
                     },
                     "main": "./out/notebook.js",
                     "scripts": {
                         "vscode:prepublish": "npm run compile",
                         "compile": "tsc -p ./",
                         "lint": "eslint src --ext ts",
-                        "watch": "tsc -watch -p ./",
-                        "pretest": "npm run compile && npm run lint",
-                        "test": "node ./out/test/runTest.js"
+                        "watch": "tsc -watch -p ./"
                     },
                     "categories": [
                         "Other"
@@ -1613,7 +1592,7 @@ describe('test code generator', function () {
 
                     var body = fs.readFileSync('package.json', 'utf8');
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     done();
                 } catch (e) {
@@ -1653,25 +1632,20 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": engineVersion,
                         "@types/azdata": "*",
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
                         "@typescript-eslint/parser": "^2.30.0",
                         "@typescript-eslint/eslint-plugin": "^2.30.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0"
+                        "glob": "^7.1.7",
+                        "typescript": "^4.3.5",
                     },
                     "main": "./out/jupyter-book.js",
                     "scripts": {
                         "vscode:prepublish": "npm run compile",
                         "compile": "tsc -p ./",
                         "lint": "eslint src --ext ts",
-                        "watch": "tsc -watch -p ./",
-                        "pretest": "npm run compile && npm run lint",
-                        "test": "node ./out/test/runTest.js"
+                        "watch": "tsc -watch -p ./"
                     },
                     "categories": [
                         "Other"
@@ -1688,7 +1662,7 @@ describe('test code generator', function () {
 
                     var body = fs.readFileSync('package.json', 'utf8');
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     done();
                 } catch (e) {
@@ -1730,16 +1704,13 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": engineVersion,
                         "@types/azdata": "*",
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
                         "@typescript-eslint/parser": "^2.30.0",
                         "@typescript-eslint/eslint-plugin": "^2.30.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0"
+                        "glob": "^7.1.7",
+                        "typescript": "^4.3.5"
                     },
                     "main": "./out/jupyter-book.js",
                     "scripts": {
@@ -1747,8 +1718,6 @@ describe('test code generator', function () {
                         "compile": "tsc -p ./",
                         "lint": "eslint src --ext ts",
                         "watch": "tsc -watch -p ./",
-                        "pretest": "npm run compile && npm run lint",
-                        "test": "node ./out/test/runTest.js"
                     },
                     "categories": [
                         "Other"
@@ -1765,7 +1734,7 @@ describe('test code generator', function () {
 
                     var body = fs.readFileSync('package.json', 'utf8');
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     done();
                 } catch (e) {
@@ -1804,25 +1773,20 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": engineVersion,
                         "@types/azdata": "*",
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
                         "@typescript-eslint/parser": "^2.30.0",
                         "@typescript-eslint/eslint-plugin": "^2.30.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0"
+                        "glob": "^7.1.7",
+                        "typescript": "^4.3.5"
                     },
                     "main": "./out/jupyter-book.js",
                     "scripts": {
                         "vscode:prepublish": "npm run compile",
                         "compile": "tsc -p ./",
                         "lint": "eslint src --ext ts",
-                        "watch": "tsc -watch -p ./",
-                        "pretest": "npm run compile && npm run lint",
-                        "test": "node ./out/test/runTest.js"
+                        "watch": "tsc -watch -p ./"
                     },
                     "categories": [
                         "Other"
@@ -1839,7 +1803,7 @@ describe('test code generator', function () {
 
                     var body = fs.readFileSync('package.json', 'utf8');
                     var actual = JSON.parse(body);
-                    assert.deepEqual(expected, actual);
+                    assert.deepStrictEqual(expected, actual);
 
                     done();
                 } catch (e) {
@@ -1880,16 +1844,16 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": engineVersion,
                         "@types/azdata": env.azdataVersion,// {{ADS EDIT}}
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
+                        "@types/mocha": "^9.0.0",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
                         "@typescript-eslint/parser": "^2.30.0",
                         "@typescript-eslint/eslint-plugin": "^2.30.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0"
+                        "glob": "^7.1.7",
+                        "mocha": "^9.1.0",
+                        "typescript": "^4.3.5",
+                        "azdata-test": "^1.x"
                     },
                     "main": "./out/main.js",
                     "scripts": {
@@ -1919,7 +1883,7 @@ describe('test code generator', function () {
 
                     var packageJSONBody = fs.readFileSync('package.json', 'utf8')
                     var actualPackageJSON = JSON.parse(packageJSONBody);
-                    assert.deepEqual(expectedPackageJSON, actualPackageJSON);
+                    assert.deepStrictEqual(expectedPackageJSON, actualPackageJSON);
 
                     done();
                 } catch (e) {
@@ -1960,16 +1924,16 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": engineVersion,
                         "@types/azdata": env.azdataVersion,// {{ADS EDIT}}
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
+                        "@types/mocha": "^9.0.0",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
                         "@typescript-eslint/parser": "^2.30.0",
                         "@typescript-eslint/eslint-plugin": "^2.30.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0"
+                        "glob": "^7.1.7",
+                        "mocha": "^9.1.0",
+                        "typescript": "^4.3.5",
+                        "azdata-test": "^1.x"
                     },
                     "main": "./out/main.js",
                     "scripts": {
@@ -1998,7 +1962,7 @@ describe('test code generator', function () {
 
                     var packageJSONBody = fs.readFileSync('package.json', 'utf8')
                     var actualPackageJSON = JSON.parse(packageJSONBody);
-                    assert.deepEqual(expectedPackageJSON, actualPackageJSON);
+                    assert.deepStrictEqual(expectedPackageJSON, actualPackageJSON);
 
                     done();
                 } catch (e) {
@@ -2040,16 +2004,16 @@ describe('test code generator', function () {
                     "devDependencies": {
                         "@types/vscode": engineVersion,
                         "@types/azdata": env.azdataVersion,// {{ADS EDIT}}
-                        "@types/glob": "^7.1.1",
-                        "@types/mocha": "^7.0.2",
+                        "@types/glob": "^7.1.4",
+                        "@types/mocha": "^9.0.0",
                         "@types/node": "^13.11.0",
                         "eslint": "^6.8.0",
                         "@typescript-eslint/parser": "^2.30.0",
                         "@typescript-eslint/eslint-plugin": "^2.30.0",
-                        "glob": "^7.1.6",
-                        "mocha": "^7.1.2",
-                        "typescript": "^3.8.3",
-                        "vscode-test": "^1.3.0"
+                        "glob": "^7.1.7",
+                        "mocha": "^9.1.0",
+                        "typescript": "^4.3.5",
+                        "azdata-test": "^1.x"
                     },
                     "main": "./out/main.js",
                     "scripts": {
@@ -2078,7 +2042,7 @@ describe('test code generator', function () {
 
                     var packageJSONBody = fs.readFileSync('package.json', 'utf8')
                     var actualPackageJSON = JSON.parse(packageJSONBody);
-                    assert.deepEqual(expectedPackageJSON, actualPackageJSON);
+                    assert.deepStrictEqual(expectedPackageJSON, actualPackageJSON);
 
                     done();
                 } catch (e) {

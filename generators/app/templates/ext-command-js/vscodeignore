@@ -1,6 +1,6 @@
-.vscode/**
-.vscode-test/**
-test/**
+.vscode
+.ads-test
+test
 .gitignore
 vsc-extension-quickstart.md
 **/jsconfig.json

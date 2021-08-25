@@ -27,7 +27,7 @@
             "runtimeExecutable": "azuredatastudio",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
-                "--extensionTestsPath=${workspaceFolder}/test"
+                "--extensionTestsPath=${workspaceFolder}/test/suite"
             ]
         }
     ]

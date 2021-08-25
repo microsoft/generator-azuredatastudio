@@ -22,5 +22,5 @@ activated (in this case by executing the command). Inside the `activate` functio
 
 ## Explore the API
 * You can open the full set of our API when you open the file:
-  * SQL specific APIs: `node_modules/azdata/azdata.d.ts`.
-  * Other APIs: `node_modules/vscode/vscode.d.ts`.
+  * SQL specific APIs: `node_modules/@types/azdata/azdata.d.ts`.
+  * Other APIs: `node_modules/@types/vscode/vscode.d.ts`.

@@ -31,7 +31,7 @@
             "runtimeExecutable": "azuredatastudio",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}",
-                "--extensionTestsPath=${workspaceFolder}/out/test"
+                "--extensionTestsPath=${workspaceFolder}/out/test/suite"
             ],
             "outFiles": [
                 "${workspaceFolder}/out/test/**/*.js"

@@ -23,7 +23,7 @@ yo azuredatastudio
 
 The extension generator will walk you through the steps required to create your customized extension with prompting for any required information.
 
-![The command generator](https://raw.githubusercontent.com/llali/generator-azuredatastudio/master/yoazuredatastudio.png)
+![The command generator](https://raw.githubusercontent.com/Microsoft/generator-azuredatastudio/main/yoazuredatastudio.png)
 
 To learn more about extension authoring, there are a few resources you can view. For an overview on the extension authoring process, see [Extension authoring](https://docs.microsoft.com/en-us/sql/azure-data-studio/extension-authoring?view=sql-server-ver15). For a tutorial using the Extension Generator to create an extension, view [Create an extension](https://docs.microsoft.com/en-us/sql/azure-data-studio/tutorial-create-extension?view=sql-server-ver15).
 

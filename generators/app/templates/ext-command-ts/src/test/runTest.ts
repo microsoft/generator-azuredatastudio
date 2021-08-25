@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-import { runTests } from 'vscode-test';
+import { runTests } from 'azdata-test';
 
 async function main() {
 	try {
