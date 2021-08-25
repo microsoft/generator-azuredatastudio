@@ -1,0 +1,57 @@
+{
+  "name": "generator-azuredatastudio",
+  "version": "0.14.0",
+  "description": "Yeoman generator for Azure Data Studio Extensions",
+  "keywords": [
+    "yeoman-generator",
+    "vscode",
+    "azuredatastudio",
+    "visual studio code",
+    "azure data studio",
+    "vs code",
+    "extensions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/llali/generator-azuredatastudio"
+  },
+  "bugs": {
+    "url": "https://github.com/llali/generator-azuredatastudio/issues"
+  },
+  "homepage": "https://docs.microsoft.com/en-us/sql/azure-data-studio",
+  "license": "MIT",
+  "author": {
+    "name": "Azure Data Studio Team",
+    "url": "https://github.com/Microsoft/azuredatastudio"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "prepublish": "npm test",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "assert-plus": "^1.0.0",
+    "cd": "^0.3.3",
+    "chalk": "^4.0.0",
+    "fast-plist": "^0.1.2",
+    "request-light": "0.3.0",
+    "sanitize-filename": "^1.6.3",
+    "sax": "^1.2.4",
+    "tslint": "^6.1.2",
+    "yeoman-generator": "^4.10.1",
+    "yosay": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.13.4",
+    "@types/yeoman-generator": "^3.1.4",
+    "mocha": "^7.2.0",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^2.6.0",
+    "yo": "^3.1.1"
+  }
+}

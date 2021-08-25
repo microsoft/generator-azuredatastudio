@@ -1,0 +1,24 @@
+{
+    "name": <%- JSON.stringify(name) %>,
+    "displayName": <%- JSON.stringify(displayName) %>,
+    "description": <%- JSON.stringify(description) %>,
+	"publisher": <%- JSON.stringify(publisherName) %>,
+    "version": "0.0.1",
+    "engines": {
+        "vscode": <%- JSON.stringify(vsCodeEngine) %>,
+        "azdata": <%- JSON.stringify(azdataEngine) %>
+    },
+    "categories": [
+        "Language Packs"
+    ],
+    "contributes": {
+        "localizations": [{
+            "languageId": <%- JSON.stringify(lpLanguageId) %>,
+            "languageName": <%- JSON.stringify(lpLanguageName) %>,
+            "localizedLanguageName": <%- JSON.stringify(lpLocalizedLanguageName) %>
+        }]
+    },
+    "scripts": {
+        "update": "cd ../vscode && <%= pkgManager %> run update-localization-extension <%- lpLanguageId %>"
+    }
+}

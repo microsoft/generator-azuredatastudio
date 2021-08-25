@@ -1,33 +1,46 @@
-# Project
+# Azure Data Studio - Extension Generator
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+[![Twitter Follow](https://img.shields.io/twitter/follow/azuredatastudio?style=social)](https://twitter.com/azuredatastudio)
 
-As the maintainer of this project, please make a few updates:
+The Azure Data Studio Extension Generator is a Yeoman-based generator to help get you started with authoring extensions. There are 13 different possible templates for you to use.
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+## Install the Generator
 
-## Contributing
+Ensure that you have [Node.js](https://nodejs.org/en/) and npm installed.
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+Install Yeoman and the Azure Data Studio Extension generator by using the following command:
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+```bash
+npm install -g yo generator-azuredatastudio
+```
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+## Running the Generator
+To launch the generator type:
 
-## Trademarks
+```bash
+yo azuredatastudio
+```
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+The extension generator will walk you through the steps required to create your customized extension with prompting for any required information.
+
+![The command generator](https://raw.githubusercontent.com/llali/generator-azuredatastudio/master/yoazuredatastudio.png)
+
+To learn more about extension authoring, there are a few resources you can view. For an overview on the extension authoring process, see [Extension authoring](https://docs.microsoft.com/en-us/sql/azure-data-studio/extension-authoring?view=sql-server-ver15). For a tutorial using the Extension Generator to create an extension, view [Create an extension](https://docs.microsoft.com/en-us/sql/azure-data-studio/tutorial-create-extension?view=sql-server-ver15).
+
+## Generator Output
+
+These templates will:
+* Create a base folder structure with extension-specific files
+* Template out a rough `package.json` using your answers from the provided prompts
+* Import any assets required for your extension e.g. tmBundles or the VS Code Library
+* For Extensions: Set-up `launch.json` for running your extension and attaching to a process
+* Document how to get started in a `vsc-extension-quickstart.md` file
+
+## History
+
+* 0.11.x: Added dashboard, notebook, Jupyter Book, and wizards/dialogues templates.
+* 0.10.x: Generates a Azure Data Studio extension for TypeScript 1.8.10
+
+## License
+
+[MIT](LICENSE)
