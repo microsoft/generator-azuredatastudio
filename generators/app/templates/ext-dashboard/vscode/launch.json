@@ -19,7 +19,8 @@
             "runtimeExecutable": "azuredatastudio",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}"
-            ]
+            ],
+            "timeout": 30000
         },
         {
             "type": "node",
@@ -33,7 +34,7 @@
                 "${workspaceRoot}/out/**/*.js"
             ],
             "preLaunchTask": "",
-            "timeout": 25000
+            "timeout": 30000
         },
         {
             "name": "Debug in enlistment",
@@ -51,4 +52,7 @@
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ],
-            "timeout": 20000
+            "timeout": 30000
+        }
+    ]
+}

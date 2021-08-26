@@ -18,7 +18,8 @@
             "runtimeExecutable": "azuredatastudio",
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}"
-            ]
+            ],
+            "timeout": 30000
         }
     ]
 }
