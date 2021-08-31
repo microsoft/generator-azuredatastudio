@@ -7,3 +7,5 @@
 /.gitattributes
 /.travis.yml
 /jsconfig.json
+*.tgz
+*.yml
