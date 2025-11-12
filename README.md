@@ -39,7 +39,7 @@ These templates will:
 ## History
 
 * 0.11.x: Added dashboard, notebook, Jupyter Book, and wizards/dialogues templates.
-* 0.10.x: Generates a Azure Data Studio extension for TypeScript 1.8.10
+* 0.10.x: Generates an Azure Data Studio extension for TypeScript 1.8.10
 
 ## License
 
